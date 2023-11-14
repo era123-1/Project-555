@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body>
+ 
+    <div class="top-bar">
+    
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>First Aid Application</h1>  
+    </div>
+    
+        <div class="main-content">
+            <div class="root"></div>
+            
+            <div class="wrapper">
+            <div class="emergency-buttons">
+                <button onclick="showInstructions('infrakt')">Infrakt</button>
+                <button onclick="showInstructions('thyerje')">Thyerje</button>
+                <button onclick="showInstructions('plage')">Plage</button>
+                <button onclick="showInstructions('hipoglikemia')">Hipoglikemia</button>
+                <button onclick="showInstructions('aksidente')">Aksidente</button>
+                <button onclick="showInstructions('mbytja')">Mbytja</button>
+                <button onclick="showInstructions('insekte')">Insekte</button>
+                <button onclick="showInstructions('zjarri')">Zjarri</button>
+            </div>
+            <div class="emergency-images-container">   
+  <table class="emergency-images-grid">
+    <tr>
+        <td><img src="f1.jpg" alt="Infrakt Icon"></td>
+        <td><img src="f2.jpg" alt="Thyerje Icon"></td>
+        <td><img src="f3.jpg" alt="Plage Icon"></td>
+        <td><img src="f4.jpg" alt="Hipoglikemia Icon"></td>
+        <td><img src="f5.jpg" alt="Aksidente Icon"></td>
+        <td><img src="f6.jpg" alt="Mbytja Icon"></td>
+        <td><img src="f7.jpg" alt="Insekte Icon"></td>
+        <td><img src="f8.jpg" alt="Zjarri Icon"></td>
+
+        <!-- Shtoni imazhet për butonat e tjera të emergjencës këtu -->
+    </tr>
+</table>
+  </div>
+            
+            <div class="instructions" id="instructions"></div>
+        </div>
+        </div>
+        <div class="container">
+            <h2 id="mapToggle" >Location Map</h2>
+            <iframe  id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.5526763569583!2d19.83199567526826!3d41.34033949891338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031423703601d%3A0x4b07122dcf9c14af!2sMother%20Teresa%20Hospital!5e0!3m2!1sen!2s!4v1699520036141!5m2!1sen!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        <footer>
+          
+            <div class="emergency-contact-footer">
+                <div class="emergency-item">
+                    <button onclick="callNumber('127')">
+                        <i class="fas fa-truck-medical"></i> AMBULANCA: 127
+                    </button>
+                   
+                </div>
+                <div class="emergency-item">
+                    <button onclick="callNumber('128')">
+                         <i class="fas fa-fire"></i> ZJARRFIKSJA: 128
+                         </button>
+                    
+                </div>
+                <div class="emergency-item">
+                    <button onclick="callNumber('129')">
+                         <i class="fas fa-shield-alt"></i> POLICIA: 129
+                         </button>
+                    
+                </div>
+            </div>
+              
+        </footer>
+</body>
+<script src="script.js"></script>
+</html>
+
+

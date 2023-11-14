@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+   
+}
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: white;
+    font-family: 'poppins', sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+.top-bar h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.root {
+    grid-column: span 2;
+}
+
+.emergency-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.emergency-images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.emergency-images-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.emergency-images-grid img {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    border: 1px solid #111010;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container {
+   background-color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+#mapToggle{
+font-size: 25px;
+font-weight: bold;
+color: red;
+
+
+}
+#map {
+    width: 40%; 
+    height: 300px;
+    border: none; 
+    margin-top: 20px;
+    margin: auto; 
+    
+}
+
+/* Stili për footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stili për pjesën e kontaktit në footer */
+.emergency-contact-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili për butonat e kontaktit në footer */
+.emergency-contact-footer button {
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.emergency-contact-footer button:hover {
+    background-color: black;
+}
+
+/* Stili për ikonat në butonat e kontaktit */
+.emergency-contact-footer button i {
+    margin-right: 5px;
+}
+
+/* Stili për tekstin në fund të butonave */
+.emergency-contact-footer .emergency-item {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Change to a single column layout for small screens */
+    }
+
+    #map {
+        width: 100%; /* Make the map full-width on small screens */
+    }
+    .emergency-images-grid img {
+        width: 100%; /* Imazhet zënë gjithë gjerësinë e prindit */
+        max-width: none; /* Hiqeni kufirin maksimal të width-it për të lejuar imazhet të përshtaten sipas ekranit */
+        margin: 10px; /* Shtoni një hapësirë prej 10px midis imazheve */
+    }
+
+        .emergency-contact-footer button {
+            width: 100%; 
+            max-width: none; 
+            margin: 10px;
+        }
+}
